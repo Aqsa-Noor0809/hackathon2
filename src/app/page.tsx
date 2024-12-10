@@ -1,6 +1,8 @@
 import Banner from "./components/banner";
 import BTRange from "./components/BTRange";
-import OProducts from "./components/products";
+import Inspirations from "./components/inspirations";
+import OProducts from "./components/Products";
+import Share from "./components/share";
 import Home from "./home/page";
 
 export default function App(){
@@ -10,6 +12,8 @@ export default function App(){
      <Banner />
      <BTRange />
      <OProducts />
+     <Inspirations />
+     <Share />
     </div>
   );
 };
