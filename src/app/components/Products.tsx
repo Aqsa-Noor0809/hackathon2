@@ -72,6 +72,7 @@ export default function OProducts() {
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-10">Our Products</h1>
 
+        {/* Grid for product cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div
@@ -89,15 +90,14 @@ export default function OProducts() {
               {(product.discount || product.isNew) && (
                 <div
                   className={`absolute top-3 left-3 px-3 py-1 text-white text-sm font-bold rounded-full ${
-                    product.discount
-                      ? "bg-red-500"
-                      : "bg-emerald-500"
+                    product.discount ? "bg-red-500" : "bg-emerald-500"
                   }`}
                 >
                   {product.discount || "New"}
                 </div>
               )}
 
+              {/* Overlay with buttons */}
               <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4">
                 <button className="bg-white text-[#B88E2F] w-[245px] h-[48px] px-4 py-2 text-sm font-semibold shadow-md hover:bg-[#B88E2F] hover:text-white duration-150 mb-6">
                   Add to Cart
@@ -127,8 +127,9 @@ export default function OProducts() {
                 </div>
               </div>
 
+              {/* Product Details */}
               <div className="p-4 bg-[#F4F5F7]">
-                <h5 className="font-semibold text-[24px]">{product.name}</h5>
+                <h5 className="font-semibold text-[20px] sm:text-[24px]">{product.name}</h5>
                 <p className="text-sm text-[#898989]">{product.description}</p>
                 <div className="flex items-center space-x-4 mt-2">
                   <span className="font-semibold text-lg text-gray-800">
@@ -145,7 +146,7 @@ export default function OProducts() {
           ))}
         </div>
 
-        <button className="mt-8 px-6 py-3 border border-[#B88E2F] text-[#B88E2F] font-medium hover:bg-[#B88E2F] hover:text-white transition duration-300 w-[245px] h-[48px]">
+        <button className="mt-8 px-6 py-3 border border-[#B88E2F] text-[#B88E2F] font-medium hover:bg-[#B88E2F] hover:text-white transition duration-300 w-[245px] h-[48px] mx-auto">
           Show More
         </button>
       </div>
