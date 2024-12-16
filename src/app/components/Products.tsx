@@ -76,7 +76,7 @@ export default function OProducts() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="relative bg-white rounded-lg shadow-md overflow-hidden group"
+              className="relative bg-white shadow-md overflow-hidden group"
             >
               {/* Product Image */}
               <img

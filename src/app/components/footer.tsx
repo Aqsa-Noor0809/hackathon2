@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="Footer w-full bg-white">
+    <div className="Footer w-full bg-white ">
       <div className="Rectangle bg-white border border-black/30 border-opacity-[17%] pl-9 pr-9">
 
         {/* Top Section */}

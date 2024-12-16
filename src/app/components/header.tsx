@@ -22,7 +22,7 @@ export default function Header() {
             <Link href={"/shop"}>Shop</Link>
           </li>
           <li>
-            <Link href={"/about"}>Blog</Link>
+            <Link href={"/Blog"}>Blog</Link>
           </li>
           <li>
             <Link href={"/contact"}>Contact</Link>
@@ -33,9 +33,15 @@ export default function Header() {
       {/* Icons Section */}
       <div className="flex space-x-4 md:space-x-6">
         <img src="/Images/outline.png" alt="vector" className="h-7 w-7" />
+        <Link href={"/s-product"}>
         <img src="/Images/search.png" alt="search" className="h-7 w-7" />
+        </Link>
+        <Link href={"/comparision"}>
         <img src="/Images/heart.png" alt="Favourite" className="h-7 w-7" />
+        </Link>
+        <Link href={"/cart"}>
         <img src="/Images/cart.png" alt="cart" className="h-7 w-7" />
+        </Link>
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -60,7 +66,7 @@ export default function Header() {
         <Link href={"/shop"} onClick={() => setShowMenu(false)}>
           Shop
         </Link>
-        <Link href={"/about"} onClick={() => setShowMenu(false)}>
+        <Link href={"/Blog"} onClick={() => setShowMenu(false)}>
           Blog
         </Link>
         <Link href={"/contact"} onClick={() => setShowMenu(false)}>
