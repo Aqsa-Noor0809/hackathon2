@@ -66,7 +66,6 @@ export default function OProducts() {
       isNew: true,
     },
   ];
-
   return (
     <div className="OProducts bg-gray-100 py-12">
       <div className="container mx-auto px-6 text-center">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -34,13 +34,13 @@ export default function Header() {
       <div className="flex space-x-4 md:space-x-6">
         <img src="/Images/outline.png" alt="vector" className="h-7 w-7" />
         <Link href={"/s-product"}>
-        <img src="/Images/search.png" alt="search" className="h-7 w-7" />
+          <img src="/Images/search.png" alt="search" className="h-7 w-7" />
         </Link>
         <Link href={"/comparision"}>
-        <img src="/Images/heart.png" alt="Favourite" className="h-7 w-7" />
+          <img src="/Images/heart.png" alt="Favourite" className="h-7 w-7" />
         </Link>
         <Link href={"/cart"}>
-        <img src="/Images/cart.png" alt="cart" className="h-7 w-7" />
+          <img src="/Images/cart.png" alt="cart" className="h-7 w-7" />
         </Link>
       </div>
 
@@ -56,20 +56,36 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-4 py-4 md:hidden ${
-          showMenu ? "block" : "hidden"
-        }`}
+        className={`fixed top-24 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-4 py-4 z-50 transform transition-transform duration-300 ease-in-out ${
+          showMenu ? "translate-x-0" : "-translate-x-full"
+        } md:hidden`}
       >
-        <Link href={"/home"} onClick={() => setShowMenu(false)}>
+        <Link
+          href={"/home"}
+          className="w-full text-center py-2 hover:bg-gray-100"
+          onClick={() => setShowMenu(false)}
+        >
           Home
         </Link>
-        <Link href={"/shop"} onClick={() => setShowMenu(false)}>
+        <Link
+          href={"/shop"}
+          className="w-full text-center py-2 hover:bg-gray-100"
+          onClick={() => setShowMenu(false)}
+        >
           Shop
         </Link>
-        <Link href={"/Blog"} onClick={() => setShowMenu(false)}>
+        <Link
+          href={"/Blog"}
+          className="w-full text-center py-2 hover:bg-gray-100"
+          onClick={() => setShowMenu(false)}
+        >
           Blog
         </Link>
-        <Link href={"/contact"} onClick={() => setShowMenu(false)}>
+        <Link
+          href={"/contact"}
+          className="w-full text-center py-2 hover:bg-gray-100"
+          onClick={() => setShowMenu(false)}
+        >
           Contact
         </Link>
       </div>
